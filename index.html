@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./GunStyle.css">
+    <title>I have faith in you! XiaoXue</title>
+</head>
+
+<body>
+<div class="header-container">
+    <h1 class="title">Math Gun</h1>
+</div>
+
+<div class="input-container">
+    <h2 class="sub-title"> Graph a Line</h2>
+    <p class="intro">This page will help you draw the graph of a line. It assumes the basic equation of a line is </p>
+    <p class="equation">y = mx + b </p>
+    <p class="intro">where m is the slope and b is the y-intercept of the line.</p>
+    <p class="intro">Find a blank equation below that best matches the equation you are working with, then click "Plot
+        it!"</p>
+
+    <div class="input-inner">
+        y =
+        <input class="input-param" type="text" id="param1" placeholder="m" size="3" inputmode="numeric">
+        x +
+        <input class="input-param" type="text" id="param2" placeholder="b" size="3">
+        <br>
+
+        <input class="button" type="submit" value="Plot it" id="submit">
+        <input class="button" type="button" value="Clear" id="clear">
+    </div>
+</div>
+
+<div class="plot-container">
+    <canvas id="my-canvas"></canvas>
+    <script type="text/javascript" src="GunScript.js"></script>
+</div>
+
+<footer class="footer">
+    <div> Math Gun v0.1</div>
+    <div> This project is dedicated to Xiaoxue, who is my beloved</div>
+    <div> This project is open source on
+        <a href="https://github.com/dailiang18bb/Math-gun">Github</a>
+        under
+        <a href="https://github.com/dailiang18bb/Math-gun/blob/master/LICENSE">Apache 2.0 license</a>
+    </div>
+    <div> Copyright &copy; 2018 Liang Dai</div>
+</footer>
+
+</body>
+</html>

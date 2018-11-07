@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a96091d9-4271-44f4-84fe-a3f97b3290ce" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-927479848">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="css" value="1" />
+          <entry key="html" value="1" />
+          <entry key="js" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="1" />
+          <entry key="HTML" value="1" />
+          <entry key="JavaScript" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="css" value="502" />
+          <entry key="html" value="2372" />
+          <entry key="js" value="322" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSS" value="502" />
+          <entry key="HTML" value="2372" />
+          <entry key="JavaScript" value="322" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.vcs.git.usages" />
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+              <folding>
+                <element signature="e#1355#1361#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GunScript.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1857">
+              <caret line="17" column="46" selection-end-line="197" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GunStyle.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="990">
+              <caret line="66" column="25" lean-forward="true" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>\&lt;\!DOCTYPE html\&gt;\n\&lt;html lang\=\&quot;en\&quot;\&gt;\n\&lt;head\&gt;\n    \&lt;meta charset\=\&quot;UTF\-8\&quot;\&gt;\n    \&lt;meta name\=\&quot;viewport\&quot; content\=\&quot;width\=device\-width\, initial\-scale\=1\&quot;\&gt;\n    \&lt;link rel\=\&quot;stylesheet\&quot; type\=\&quot;text\/css\&quot; href\=\&quot;\.\/GunStyle\.css\&quot;\&gt;\n    \&lt;script type\=\&quot;text\/javascript\&quot; src\=\&quot;GunScipt\.js\&quot;\&gt;\&lt;\/script\&gt;\n    \&lt;title\&gt;I have faith in you\! XiaoXue\&lt;\/title\&gt;\n\&lt;\/head\&gt;\n\n\&lt;body\&gt;\n\n\&lt;div class\=\&quot;header\-container\&quot;\&gt;\n    \&lt;h1\&gt;Math Gun\&lt;\/h1\&gt;\n\&lt;\/div\&gt;\n\n\&lt;div class\=\&quot;input\-container\&quot;\&gt;\n    \n\&lt;\/div\&gt;\n\n\&lt;div class\=\&quot;polt\-container\&quot;\&gt;\n    \&lt;canvas id\=\&quot;my\-canvas\&quot;\&gt;\&lt;\/canvas\&gt;\n\n    \&lt;script type\=\&quot;text\/javascript\&quot;\&gt;\n\n        var canvas \= document\.getElementById\(\&quot;my\-canvas\&quot;\)\;\n        canvas\.width \= window\.innerWidth\;\n        canvas\.height \= window\.innerHeight\;\n        var c \= canvas\.getContext\(\&quot;2d\&quot;\)\;\n        c\.fillStyle \= \&quot;green\&quot;\;\n        c\.fillRect\(0\,0\, canvas\.width\, canvas\.height\)\;\n        \/\/\n        \/\/ function draw\(cx1\,cy1\,radius\, sAngel\, eAngel\, orientation\)\{\n        \/\/     c\.arc\(cx1\,cy1\,radius\, sAngel \* Math\.PI \, eAngel \* Math\.PI\, orientation\)\;\n        \/\/ \}\n        \/\/\n        \/\/ c\.strokeStyle \= \&quot;black\&quot;\;\n        \/\/ c\.lineWidth \= 4\;\n        \/\/\n        \/\/ \/\/ first circle\n        \/\/ for\(i \= \-290\; i \&lt; canvas\.width\; i \+\= 10\)\{\n        \/\/     c\.beginPath\(\)\;\n        \/\/     draw\(i\,200\,300\,\-0\.3\, 0\.3\, false\)\;\n        \/\/     c\.stroke\(\)\;\n        \/\/ \}\n        \/\/\n        \/\/ \/\/second cir\n        \/\/ for\(i \= \-290\; i \&lt; canvas\.width \+ 1000\; i \+\= 10\)\{\n        \/\/     c\.beginPath\(\)\;\n        \/\/     draw\(i\,600\,200\,\-0\.7\, 0\.7\, true\)\;\n        \/\/     c\.stroke\(\)\;\n        \/\/ \}\n        \/\/\n        \/\/ \/\/third cir\n        \/\/ for\(i \= \-290\; i \&lt; canvas\.width\; i \+\= 10\)\{\n        \/\/     c\.beginPath\(\)\;\n        \/\/     draw\(i\,840\,100\,\-0\.3\, 0\.3\, false\)\;\n        \/\/     c\.stroke\(\)\;\n        \/\/ \}\n\n\n    \&lt;\/script\&gt;\n    \n\&lt;\/div\&gt;\n\n\n\&lt;\/body\&gt;\n\&lt;\/html\&gt;</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/GunScipt.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/GunScript.js" />
+        <option value="$PROJECT_DIR$/GunStyle.css" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1680" />
+    <option name="height" value="1050" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Math-gun" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Math-gun" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a96091d9-4271-44f4-84fe-a3f97b3290ce" name="Default Changelist" comment="" />
+      <created>1541514518701</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1541514518701</updated>
+      <workItem from="1541514521135" duration="20990000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="20990000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989796" visible="true" weight="0.24954791" />
+      <window_info id="Structure" order="1" sideWeight="0.50102043" side_tool="true" visible="true" weight="0.24954791" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" weight="0.32959184" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/GunStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="66" column="25" lean-forward="true" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GunScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1857">
+          <caret line="17" column="46" selection-end-line="197" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#1355#1361#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
