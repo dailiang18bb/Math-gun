@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Product+Sans:400,400i,700,700i");
+@import url('https://fonts.googleapis.com/css?family=Coda');
+@import url('https://fonts.googleapis.com/css?family=Mali');
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:600i');
+
+/*font-family: 'Coda', cursive;*/
+/*font-family: 'Mali', cursive;*/
+/*font-family: "Product Sans", sans-serif;*/
+/*font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;*/
+
+/*color index*/
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.header-container {
+    padding: 4px;
+    text-align: center;
+    font-family: "Product Sans", sans-serif;
+    background-color: #087f23;
+}
+
+.title {
+    margin: 0;
+
+}
+
+.sub-title {
+    margin: 0;
+    text-align: center;
+}
+
+.intro {
+    margin: 0 10px;
+    text-align: center;
+}
+
+.input-container {
+
+    font-family: 'Mali', cursive;
+    background-color: #E1E2E1;
+
+    transition: color .4s ease;
+    color: rgba(0, 0, 0, 1);
+}
+
+.equation {
+    margin: 5px 10px;
+    font-family: 'Crimson Text', serif;
+    font-size: x-large;
+    text-align: center;
+
+}
+
+.button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Mali', cursive;
+    font-size: x-large;
+
+}
+
+.input-inner {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #4caf50;
+    font-family: 'Mali', cursive;
+    font-size: x-large;
+    text-align: center;
+}
+
+.input-param {
+    text-align: right;
+    font-size: large;
+}
+
+.footer {
+
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+
+}
