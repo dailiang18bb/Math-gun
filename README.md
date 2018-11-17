@@ -12,6 +12,12 @@ http://webpage.pace.edu/ld17017p/xiaoxue/
 ### graph a line
 
 
+## Updated
+* add colorful line
+* add line list
+* add auto empty input field
+
+
 
 ## License
 This project is under Apache 2.0 license
