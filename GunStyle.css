@@ -76,6 +76,10 @@ body {
     font-size: large;
 }
 
+.line-list p {
+    margin: 0;
+}
+
 .footer {
 
     font-size: 14px;

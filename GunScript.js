@@ -25,6 +25,20 @@ var centerX = canvas.height / 2;
 var centerY = canvas.height / 2;
 console.log(parseInt(canvas.width / 10));
 
+// Color init
+var lineColors = [  "#e63d17",
+                    "#1a9fe6",
+                    "#e6d921",
+                    "#e6179a",
+                    "#7f0e08",
+                    "#16087f",
+                    "#7f4908",
+                    "#7f0871",]
+
+// Lines list
+var lineNum = 0;
+var lineList = document.getElementById("line-list-holder");
+
 
 //////////////////////////
 // Run
@@ -50,13 +64,18 @@ submit.addEventListener("click", function () {
     console.log("rotateDegree" + rotateDegree);
     console.log(unit);
     rotateAndTranslate(rotateDegree, interceptValue, unit);
-
+    addLine(slopeValue,interceptValue);
+    emptyInput();
+    lineNum++;
 });
 
 // Clear button
 clear.addEventListener("click", function () {
     c.clearRect(0, 0, canvas.width, canvas.height);
     drawInit();
+    removeLine();
+    lineNum=0;
+    emptyInput();
 });
 
 
@@ -131,7 +150,7 @@ function drawCoordinatePoints(x, y, u, p) {
 function drawLine() {
     c.save();
     c.beginPath();
-    c.strokeStyle = "red";
+    c.strokeStyle = lineColors[lineNum % lineColors.length];
     c.lineWidth = 2;
     c.moveTo(-canvas.width, 0);
     c.lineTo(canvas.width * 2, 0);
@@ -155,6 +174,44 @@ function rotateAndTranslate(d, b, u) {
 function drawLineDot() {
     c.fillRect(centerX, centerY, 2, 2);
 }
+
+
+// add the line equation to the list
+function addLine(slopeValue, interceptValue) {
+    console.log("slopeValue:::" + slopeValue);
+    console.log("interceptValue:::" + interceptValue);
+    console.log(slopeValue == null);
+
+    let para = document.createElement("P");
+    let lineText = "y = " + slopeValue + "x + " + interceptValue;
+    if ((slopeValue == 0 || slopeValue == null) && (interceptValue == 0 || interceptValue == null)) {
+        lineText = "y = 0";
+    } else if (interceptValue == 0) {
+        lineText = "y = " + slopeValue + "x";
+    } else if (slopeValue == 0) {
+        lineText = "y = " + interceptValue;
+    }
+
+    console.log("lineText:::" + lineText);
+    let t = document.createTextNode(lineText);
+    para.appendChild(t);
+    lineList.appendChild(para);
+}
+
+// clear the line from the list
+function removeLine() {
+    while (lineList.hasChildNodes()) {
+        lineList.removeChild(lineList.firstChild);
+    }
+}
+
+// empty the input field
+function emptyInput() {
+    slope.value = "";
+    intercept.value = "";
+}
+
+
 
 
 // triangle
