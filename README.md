@@ -11,6 +11,13 @@ http://webpage.pace.edu/ld17017p/xiaoxue/
 
 ### graph a line
 
+## Future update plan
+
+
+* line color vary 
+* plot line by two point
+* Quadratic function
+
 
 ## Updated
 * add colorful line
