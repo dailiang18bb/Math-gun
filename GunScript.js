@@ -254,7 +254,13 @@ function addLine(slopeValue, interceptValue) {
     }
 
     console.log("lineText:::" + lineText);
+    var colorCircleDiv = document.createElement("div");
+    colorCircleDiv.style.width = "20px";
+    colorCircleDiv.style.height = "20px";
+    colorCircleDiv.style.background = lineColors[lineNum % lineColors.length];
+
     let t = document.createTextNode(lineText);
+    para.appendChild(colorCircleDiv);
     para.appendChild(t);
     lineList.appendChild(para);
 }

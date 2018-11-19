@@ -10,6 +10,7 @@
 
 /*color index*/
 
+
 body {
     padding: 0;
     margin: 0;
@@ -63,8 +64,8 @@ body {
 }
 
 .input-inner {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    /* padding-top: 10px; */
+    /* padding-bottom: 10px; */
     background-color: #4caf50;
     font-family: 'Mali', cursive;
     font-size: x-large;
@@ -73,6 +74,9 @@ body {
 
 .input-param {
     text-align: right;
+    font-size: large;
+}
+.input-param-points {
     font-size: large;
 }
 
@@ -87,7 +91,8 @@ body {
 /* Style the tab */
 .input-tab {
     overflow: hidden;
-    background-color: #4caf50;
+    background-color: #087f23;
+    width: 100%;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -98,9 +103,11 @@ body {
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 14px 16px;
+    padding: 4px 4px;
     transition: 0.3s;
     color:black;
+    width: 50%;
+    float: left;
 }
 
 /* Change background color of buttons on hover */
@@ -111,7 +118,8 @@ body {
 /* Create an active/current tablink class */
 .input-tab button.active {
     color: white;
-    background-color: #087f23;
+    background-color: #4caf50;
+    font-weight: bold;
 }
 
 /* Style the tab content */
@@ -123,6 +131,13 @@ body {
 
 .line-list p {
     margin: 0;
+}
+
+.line-list div{
+    margin-right: 4px;
+    display: inline-block;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
 }
 
 .footer {
