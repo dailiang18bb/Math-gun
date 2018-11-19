@@ -22,6 +22,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./GunStyle.css">
     <title>Have fun with Math</title>
+    <script type="text/javascript" src="./GunHelperScript.js"></script>
+
 </head>
 
 <body>
@@ -38,14 +40,39 @@
         it!"</p>
 
     <div class="input-inner">
-        y =
-        <input class="input-param" type="text" id="param1" placeholder="m" size="3" inputmode="numeric">
-        x +
-        <input class="input-param" type="text" id="param2" placeholder="b" size="3">
-        <br>
+        <!-- Tab links -->
+        <div class="input-tab">
+            <button class="tablinks" onclick="openInputFunction(event, 'line-equation')" id="equation-plot">by equation</button>
+            <button class="tablinks" onclick="openInputFunction(event, 'line-two-points')" id="points-plot">by two points</button>
+        </div>
+        <!-- Tab content -->
+        <div id="line-equation" class="tabcontent">
+            <p class="input-equation">y =
+                <input class="input-param" type="text" id="param1" placeholder="m" size="3" inputmode="numeric">
+                x +
+                <input class="input-param" type="text" id="param2" placeholder="b" size="3">
+            </p>
+        </div>
+        
+        <div id="line-two-points" class="tabcontent">
+            <p class="input-two-points">
+                 Point 1: (
+                <input class="input-param-points" type="text" id="param3" placeholder="x1" size="4" inputmode="numeric">
+                 , 
+                <input class="input-param-points" type="text" id="param4" placeholder="y1" size="4" inputmode="numeric">
+                 )<br>Point 2: (
+                <input class="input-param-points" type="text" id="param5" placeholder="x2" size="4" inputmode="numeric">
+                 , 
+                <input class="input-param-points" type="text" id="param6" placeholder="y2" size="4" inputmode="numeric">
+                 )
+            </p>
+        </div>
 
+        <!-- Plot and clear button -->
         <input class="button" type="submit" value="Plot it" id="submit">
         <input class="button" type="button" value="Clear" id="clear">
+
+        <!-- List the lines that you made -->
         <div class="line-list" id="line-list-holder"></div>
     </div>
 </div>
