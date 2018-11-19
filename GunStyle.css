@@ -103,7 +103,9 @@ body {
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 4px 4px;
+    padding: 0;
+    padding-top: 4px;
+    padding-bottom: 4px;
     transition: 0.3s;
     color:black;
     width: 50%;
