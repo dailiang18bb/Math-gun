@@ -31,10 +31,6 @@ http://webpage.pace.edu/ld17017p/xiaoxue/0.21beta
 
 
 
-
-
-
-
 ## Release milestone
 ### v0.2 Nov, 19th, 2018
 * draw lines by two points
