@@ -25,6 +25,43 @@ var centerX = canvas.height / 2;
 var centerY = canvas.height / 2;
 console.log(parseInt(canvas.width / 10));
 
+// Color init
+var lineColors = [  "#e63d17",
+                    "#1a9fe6",
+                    "#e6d921",
+                    "#e6179a",
+                    "#7f0e08",
+                    "#16087f",
+                    "#7f4908",
+                    "#7f0871",]
+
+// Lines list
+var lineNum = 0;
+var lineList = document.getElementById("line-list-holder");
+
+// Points plot
+var x1,x2,y1,y2;
+var x1Val,x2Val,y1Val,y2Val;
+
+var equationPlot = document.getElementById("equation-plot");
+var pointsPlot = document.getElementById("points-plot");
+
+var x1 = document.getElementById("param3");
+var y1 = document.getElementById("param4");
+var x2 = document.getElementById("param5");
+var y2 = document.getElementById("param6");
+
+
+x1Val = x2Val = y1Val = y2Val= 0;
+// line x=n flag
+var specialFlag = false;
+
+
+
+
+
+
+
 
 //////////////////////////
 // Run
@@ -42,21 +79,50 @@ drawInit();
 
 // Submit button
 submit.addEventListener("click", function () {
-    slopeValue = slope.value;
-    interceptValue = intercept.value;
-    console.log("slope" + slopeValue);
-    console.log("intercept" + interceptValue);
-    let rotateDegree = -Math.atan(slopeValue);
-    console.log("rotateDegree" + rotateDegree);
-    console.log(unit);
-    rotateAndTranslate(rotateDegree, interceptValue, unit);
+    //check activation
+    var current = document.getElementsByClassName("active");
+    console.log(current[0].id=='equation-plot');
 
+    if(current[0].id=='equation-plot'){
+        //equation-plot
+        slopeValue = slope.value;
+        interceptValue = intercept.value;
+        console.log("slope" + slopeValue);
+        console.log("intercept" + interceptValue);
+        let rotateDegree = -Math.atan(slopeValue);
+        console.log("rotateDegree" + rotateDegree);
+        console.log(unit);
+        rotateAndTranslate(rotateDegree, interceptValue, unit);
+    }else{
+        //points plot
+        x1Val = x1.value;
+        y1Val = y1.value;
+        x2Val = x2.value;
+        y2Val = y2.value;
+        //exception handle division by zero
+        if(x2Val-x1Val == 0){
+            drawYaxisParallel(90 * Math.PI / 180 , x2Val , unit);
+            specialFlag = true;
+        }else{
+            slopeValue = (y2Val - y1Val)/(x2Val-x1Val);
+            interceptValue = y2Val-(slopeValue * x2Val);
+            let rotateDegree = -Math.atan(slopeValue);
+            rotateAndTranslate(rotateDegree, interceptValue, unit);
+        }
+    }
+    addLine(slopeValue,interceptValue);
+    emptyInput();
+    lineNum++;
+    specialFlag = false;
 });
 
 // Clear button
 clear.addEventListener("click", function () {
     c.clearRect(0, 0, canvas.width, canvas.height);
     drawInit();
+    removeLine();
+    lineNum=0;
+    emptyInput();
 });
 
 
@@ -131,7 +197,7 @@ function drawCoordinatePoints(x, y, u, p) {
 function drawLine() {
     c.save();
     c.beginPath();
-    c.strokeStyle = "red";
+    c.strokeStyle = lineColors[lineNum % lineColors.length];
     c.lineWidth = 2;
     c.moveTo(-canvas.width, 0);
     c.lineTo(canvas.width * 2, 0);
@@ -151,10 +217,72 @@ function rotateAndTranslate(d, b, u) {
     c.restore();
 }
 
+function drawYaxisParallel(d, x, u){
+    c.save();
+    c.translate(centerX + (x * u), centerY );
+    c.rotate(d);
+    drawLine();
+    c.restore();
+}
+
 
 function drawLineDot() {
     c.fillRect(centerX, centerY, 2, 2);
 }
+
+
+// add the line equation to the list
+function addLine(slopeValue, interceptValue) {
+    console.log("slopeValue:::" + slopeValue);
+    console.log("interceptValue:::" + interceptValue);
+    console.log(slopeValue == null);
+
+    let para = document.createElement("P");
+    let lineText = "y = " + slopeValue + "x + " + interceptValue;
+    if (specialFlag){
+        if(x2Val == 0){
+            lineText = "x = 0";
+        }else{
+            lineText = "x = " + x2Val;
+        }
+    }else if((slopeValue == 0 || slopeValue == null) && (interceptValue == 0 || interceptValue == null)) {
+        lineText = "y = 0";
+    } else if (interceptValue == 0) {
+        lineText = "y = " + slopeValue + "x";
+    } else if (slopeValue == 0) {
+        lineText = "y = " + interceptValue;
+    }
+
+    console.log("lineText:::" + lineText);
+    var colorCircleDiv = document.createElement("div");
+    colorCircleDiv.style.width = "20px";
+    colorCircleDiv.style.height = "20px";
+    colorCircleDiv.style.background = lineColors[lineNum % lineColors.length];
+
+    let t = document.createTextNode(lineText);
+    para.appendChild(colorCircleDiv);
+    para.appendChild(t);
+    lineList.appendChild(para);
+}
+
+// clear the line from the list
+function removeLine() {
+    while (lineList.hasChildNodes()) {
+        lineList.removeChild(lineList.firstChild);
+    }
+}
+
+// empty the input field
+function emptyInput() {
+    slope.value = "";
+    intercept.value = "";
+    x1.value = "";
+    y1.value = "";
+    x2.value = "";
+    y2.value = "";
+}
+
+
 
 
 // triangle
