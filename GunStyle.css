@@ -110,6 +110,7 @@ body {
     color:black;
     width: 50%;
     float: left;
+    height: 100%;
 }
 
 /* Change background color of buttons on hover */
