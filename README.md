@@ -8,6 +8,12 @@ http://webpage.pace.edu/ld17017p/xiaoxue/0.21beta
 ## Latest Version
 ### v0.2 
 
+## Screen Shots
+![plot by equation](Screenshot/plotByEquation.gif)
+![plot by two points](Screenshot/plotByTwoPoints.gif)
+
+
+
 ## v0.2 updated notes
 * add two points draw line
 * add tabs
