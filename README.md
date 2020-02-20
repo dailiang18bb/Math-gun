@@ -2,8 +2,8 @@
 This project is dedicated to Xiaoxue, my beloved.
 
 Also, welcome everyone to use it.I believe that visualization can help us to feel the Math.  
-It currently host under Pace University server by the link below.  
-http://webpage.pace.edu/ld17017p/xiaoxue/0.21beta
+Access the app by click on the following link.
+https://dailiang18bb.github.io/Math-gun/
 
 ## Latest Version
 ### v0.31 
