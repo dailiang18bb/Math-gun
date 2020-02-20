@@ -6,7 +6,12 @@ It currently host under Pace University server by the link below.
 http://webpage.pace.edu/ld17017p/xiaoxue/0.21beta
 
 ## Latest Version
-### v0.2 
+### v0.31 
+
+## Introduction
+### graph a line
+* by equation
+* by two points
 
 ## Screen Shots
 ![plot by equation](Screenshot/plotByEquation.gif)
@@ -14,18 +19,11 @@ http://webpage.pace.edu/ld17017p/xiaoxue/0.21beta
 
 
 
-## v0.2 updated notes
-* add two points draw line
-* add tabs
-* add colorful line
-* add line list
-* add auto empty input field
+## v0.31 updated notes
+* add service worker
+* add cache function
 
 
-## Introduction
-### graph a line
-* by equation
-* by two points
 
 
 ## Future update plan
@@ -38,6 +36,8 @@ http://webpage.pace.edu/ld17017p/xiaoxue/0.21beta
 
 
 ## Release milestone
+### v0.31 Feb, 20th, 2020
+* become PWA
 ### v0.2 Nov, 19th, 2018
 * draw lines by two points
 ### v0.1-alpha Nov, 7th, 2018
