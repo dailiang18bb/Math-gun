@@ -2,6 +2,33 @@ window.onload = function () {
     startTab();
 };
 
+window.addEventListener('load', () => {
+    initServiceWorker();
+});
+
+// register service worker
+async function initServiceWorker() {
+    if ('serviceWorker' in navigator) {
+        try {
+            navigator.serviceWorker.getRegistrations()
+                .then(registrations => {
+                    // unregister the old SW
+                    if(registrations.length > 1){
+                        registrations.forEach(registration => {
+                            registration.unregister();
+                        });
+                    }
+                });
+            await navigator.serviceWorker.register('./sw.js');
+        } catch (e) {
+            console.log('SW failed');
+        }
+    }
+}
+
+
+
+
 
 // set default tab click
 function startTab() {
@@ -31,6 +58,6 @@ function openInputFunction(evt, functionName) {
     evt.currentTarget.className += " active";
 
     var current = document.getElementsByClassName("active");
-    console.log(current[0].id=='equation-plot');
+    console.log(current[0].id == 'equation-plot');
 }
 
